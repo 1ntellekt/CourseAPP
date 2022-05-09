@@ -1,11 +1,12 @@
-package com.example.courseapp
+package com.example.courseapp.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import com.example.courseapp.activities.AboutActivity
+import com.example.courseapp.R
+import com.example.courseapp.fragments.CurrentiesListFragment
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.interstitial.InterstitialAd
@@ -16,6 +17,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        if (savedInstanceState == null) {
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.container, CurrentiesListFragment(), null)
+                .commit()
+        }
 
         val adRequest:AdRequest = AdRequest.Builder().build()
         InterstitialAd.load(applicationContext,
