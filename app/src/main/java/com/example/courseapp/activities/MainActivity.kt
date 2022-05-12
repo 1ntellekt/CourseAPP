@@ -6,7 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.courseapp.R
-import com.example.courseapp.fragments.CurrentiesListFragment
+import com.example.courseapp.fragments.CurrenciesListFragment
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.interstitial.InterstitialAd
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.container, CurrentiesListFragment(), null)
+                .add(R.id.container, CurrenciesListFragment(), null)
                 .commit()
         }
 

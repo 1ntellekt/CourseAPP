@@ -54,7 +54,7 @@ class CurrenciesAdapter:BaseAdapter<CurrenciesAdapter.CurrencyViewHolder>() {
         val priceChangePercentage24h: Float,
         val marketCapChangePercentage24h: Float,
         val circulatingSupply: Double,
-        val totalSupply: Long,
+        val totalSupply: Float,
         val ath: Float,
         val athChangePercentage: Float
     )
