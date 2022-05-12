@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.courseapp.R
 
 
-class CurrentiesListFragment : Fragment() {
+class CurrenciesListFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
