@@ -1,6 +1,8 @@
 package com.example.courseapp.di
 
+import com.example.courseapp.activities.ChartActivity
 import com.example.courseapp.activities.MainActivity
+import com.example.courseapp.chart.LatestChart
 import com.example.courseapp.fragments.CurrenciesListFragment
 import com.example.courseapp.mvp.presenter.CurrenciesPresenter
 import com.example.courseapp.mvp.presenter.LatestChartPresenter
@@ -15,5 +17,7 @@ interface AppComponent {
     fun inject(presenter: CurrenciesPresenter)
     fun inject(presenter: LatestChartPresenter)
     fun inject(fragment: CurrenciesListFragment)
+    fun inject(latestChart: LatestChart)
+    fun inject(chartActivity: ChartActivity)
 
 }

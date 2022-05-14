@@ -14,12 +14,12 @@ class App:Application() {
     }
 
     private fun initDagger() {
-//        appComponent = DaggerAppComponent.builder()
-//            .appModule(AppModule(this))
-//            .restModule(RestModule())
-//            .mvpModule(MvpModule())
-//            .chartModule(ChartModule())
-//            .build()
-        appComponent = DaggerAppComponent.create()
+        appComponent = DaggerAppComponent.builder()
+            .appModule(AppModule(this))
+            .restModule(RestModule())
+            .mvpModule(MvpModule())
+            .chartModule(ChartModule())
+            .build()
+//        appComponent = DaggerAppComponent.create()
     }
 }
